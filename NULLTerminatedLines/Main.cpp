@@ -39,7 +39,7 @@ void main()
 	//cout << str << endl;
 	//shrink(str);
 	//cout << str << endl;
-	cout <<"Строка "<< (is_palindrome(str) ? "" : "НЕ") << " является палиндромом." << endl;
+	cout <<"Строка "<< (is_palindrome(str) ? "" : "НЕ ") << "является палиндромом." << endl;
 }
 int StringLength(const char str[])
 {
@@ -97,9 +97,9 @@ bool is_palindrome(char str[])
 {
 	char* buffer = new char[strlen(str) + 1]{};
 	strcpy(buffer, str);
-	int size = strlen(buffer);
 	lower_case(buffer);
 	remove_symbol(buffer, ' ');
+	int size = strlen(buffer);
 	for (int i = 0; i < size; i++)
 	{
 		if (buffer[i] != buffer[size - 1 - i])
