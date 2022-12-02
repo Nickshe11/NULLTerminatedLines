@@ -1,14 +1,15 @@
 ﻿#include <iostream>
 #include<Windows.h>
 using namespace std;
-//#define EXAMPLE_1
-#define EXAMPLE_2
+#define EXAMPLE_1
+//#define EXAMPLE_2
 
 int StringLength(const char str[]);
 void upper_case(char str[]);
 void lower_case(char str[]);
 void shrink(char str[]);
 bool is_palindrome(char str[]);
+bool is_int_number(const char str[]);
 
 void main()
 {
@@ -21,7 +22,9 @@ void main()
 	cout << str << endl;
 	cout << typeid(str).name() << endl;
 	cout << typeid("Hello").name() << endl;
+	
 #endif // EXAMPLE_1
+#ifdef EXAMPLE_2
 	const int SIZE = 256;
 	char str[SIZE] = {};
 	cout << "Введите строку: ";
@@ -39,7 +42,9 @@ void main()
 	//cout << str << endl;
 	//shrink(str);
 	//cout << str << endl;
-	cout <<"Строка "<< (is_palindrome(str) ? "" : "НЕ ") << "является палиндромом." << endl;
+	cout << "Строка " << (is_palindrome(str) ? "" : "НЕ ") << "является палиндромом." << endl;
+#endif // EXAMPLE_2
+
 }
 int StringLength(const char str[])
 {
